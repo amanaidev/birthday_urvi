@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Happy Birthday, Urvi — from Shifa</title>
+<meta name="description" content="A little digital birthday experience, made by Shifa for Urvi." />
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- Minimal top navigation -->
+<header class="topnav" role="banner">
+  <div class="topnav__mark" aria-hidden="true">Shifa <span class="topnav__arrow">→</span> Urvi</div>
+  <div class="topnav__date">9 September</div>
+  <nav class="progress" aria-label="Experience progress">
+    <span class="progress__dot" data-section="0"></span>
+    <span class="progress__dot" data-section="1"></span>
+    <span class="progress__dot" data-section="2"></span>
+    <span class="progress__dot" data-section="3"></span>
+    <span class="progress__dot" data-section="4"></span>
+    <span class="progress__dot" data-section="5"></span>
+    <span class="progress__dot" data-section="6"></span>
+    <span class="progress__dot" data-section="7"></span>
+  </nav>
+</header>
+
+<!-- Three.js canvas sits behind everything -->
+<canvas id="balloon-canvas" aria-hidden="true"></canvas>
+
+<main id="top">
+
+  <!-- SECTION 1 — HERO -->
+  <section class="section hero" id="section-hero" data-section-index="0">
+    <div class="hero__inner">
+      <p class="eyebrow js-hero-in">9 September</p>
+      <h1 class="hero__heading">
+        <span class="js-hero-in">Happy Birthday,</span>
+        <span class="js-hero-in hero__name">Urvi<span class="hero__dot">.</span></span>
+      </h1>
+      <p class="hero__subtitle js-hero-in">From the very first day of EDP<br>to the very last — you made it feel like home.</p>
+      <p class="handwritten js-hero-in">— from Shifa, with love ♡</p>
+      <button class="btn btn--primary js-hero-in" id="start-surprise" type="button">
+        Start the surprise <span class="btn__arrow">→</span>
+      </button>
+    </div>
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — A LITTLE MESSAGE -->
+  <section class="section message" id="section-message" data-section-index="1">
+    <div class="card card--paper reveal-group">
+      <p class="reveal card__salutation">Dear Urvi,</p>
+      <p class="reveal card__line">I met you on the very first day of EDP, and somehow you became the person who understood me without me having to explain everything.</p>
+      <p class="reveal card__line">From every little chaos to every quiet moment, you have been the best support I could have asked for. On EDP’s last day, I just want you to know how grateful I am that it began with you.</p>
+      <p class="reveal card__line">And because today is your birthday too: I hope this next year gives back every bit of warmth, laughter and care you bring to the people around you.</p>
+      <p class="reveal handwritten card__sign">— Shifa</p>
+      <svg class="card__doodle" viewBox="0 0 64 56" aria-hidden="true">
+        <path d="M32 50C10 36 2 24 2 14 2 5 10 0 17 0c7 0 12 4 15 10C35 4 40 0 47 0c7 0 15 5 15 14 0 10-8 22-30 36z" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — EDP MEMORY CAROUSEL -->
+  <section class="section memories" id="section-memories" data-section-index="2">
+    <p class="memories__eyebrow">A tiny EDP scrapbook</p>
+    <h2 class="section__title">The little moments that became our favourite ones.</h2>
+    <div class="memory-carousel" id="memory-carousel" aria-roledescription="carousel" aria-label="EDP memories">
+      <div class="memory-carousel__viewport">
+        <article class="memory-slide is-active" aria-label="Memory 1 of 3">
+          <button class="memory-slide__image" type="button" aria-label="Open Urvi's birthday memory"><img src="assets/images/urvi.jpg" alt="Urvi smiling at her birthday celebration"><span>tap to open ✦</span></button>
+          <div class="memory-slide__reveal"><p class="memory-slide__tag">Chapter one</p><h3>A day for you</h3><p>Today is all about your smile, your warmth, and every little thing that makes you, Urvi.</p></div>
+        </article>
+        <article class="memory-slide" aria-label="Memory 2 of 3">
+          <button class="memory-slide__image" type="button" aria-label="Open the second birthday memory"><img src="assets/images/image1.jpeg" alt="A colourful happy birthday cake with candles"><span>tap to open ✦</span></button>
+          <div class="memory-slide__reveal"><p class="memory-slide__tag">Chapter two</p><h3>Make a wish</h3><p>For all the bright, beautiful things waiting for you in the year ahead.</p></div>
+        </article>
+        <article class="memory-slide" aria-label="Memory 3 of 3">
+          <button class="memory-slide__image" type="button" aria-label="Open the final birthday memory"><img src="assets/images/image2.png" alt="A colourful birthday cake with glowing candles"><span>tap to open ✦</span></button>
+          <div class="memory-slide__reveal"><p class="memory-slide__tag">Chapter three</p><h3>More magic ahead</h3><p>EDP ends here, but the laughter, the memories and our friendship are only getting started.</p></div>
+        </article>
+      </div>
+      <div class="memory-carousel__controls">
+        <button class="carousel-arrow" id="memory-prev" type="button" aria-label="Previous memory">←</button>
+        <div class="carousel-dots" aria-label="Choose a memory">
+          <button class="carousel-dot is-active" type="button" aria-label="Show memory 1"></button>
+          <button class="carousel-dot" type="button" aria-label="Show memory 2"></button>
+          <button class="carousel-dot" type="button" aria-label="Show memory 3"></button>
+        </div>
+        <button class="carousel-arrow" id="memory-next" type="button" aria-label="Next memory">→</button>
+      </div>
+    </div>
+  <p class="memories__hint">Keep scrolling — then tap a photo to open its little surprise ✦</p>
+  </section>
+
+  <!-- SECTION 3 — INTERACTIVE SURPRISE (GIFT) -->
+  <section class="section gift-section" id="section-gift" data-section-index="3">
+    <h2 class="section__title">Okay… there's one more thing.</h2>
+    <div class="gift-stage">
+      <button class="gift" id="gift-box" type="button" aria-label="Open your gift">
+        <svg class="gift__svg" viewBox="0 0 220 200" aria-hidden="true">
+          <rect class="gift__lid" x="20" y="52" width="180" height="34" rx="6"/>
+          <rect class="gift__base" x="30" y="86" width="160" height="100" rx="8"/>
+          <rect class="gift__ribbon-v" x="100" y="52" width="20" height="134"/>
+          <rect class="gift__ribbon-h" x="20" y="60" width="180" height="18"/>
+          <path class="gift__bow" d="M110 52c-6-22-34-24-34-6 0 10 16 12 34 6zm0 0c6-22 34-24 34-6 0 10-16 12-34 6z"/>
+        </svg>
+      </button>
+      <p class="gift__hint">tap the gift</p>
+    </div>
+    <div class="gift-reveal" id="gift-reveal" aria-live="polite">
+      <p class="gift-reveal__big">A little celebration<br>for my favourite EDP person.</p>
+      <p class="gift-reveal__small">May the next chapter be louder, lighter and full of all the beautiful things you deserve.</p>
+      <p class="gift-reveal__terms">P.S. You still have to keep being wonderfully you. ♡</p>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — COMPLIMENT CARDS -->
+  <section class="section deserve" id="section-deserve" data-section-index="4">
+    <h2 class="section__title">Things Urvi deserves today</h2>
+    <div class="deserve__rail">
+      <article class="deserve-card" style="--tilt:-4deg">A birthday as bright as her smile</article>
+      <article class="deserve-card" style="--tilt:3deg">People who show up for her</article>
+      <article class="deserve-card" style="--tilt:-2deg">All the cake, obviously</article>
+      <article class="deserve-card" style="--tilt:5deg">More beautiful memories after EDP</article>
+      <article class="deserve-card" style="--tilt:-3deg">A year that feels completely hers</article>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — MOOD GENERATOR -->
+  <section class="section mood" id="section-mood" data-section-index="5">
+    <h2 class="section__title">Pick your birthday mood</h2>
+    <div class="mood__options" role="group" aria-label="Birthday mood">
+      <button class="mood-btn" data-mood="cute" type="button">Cute</button>
+      <button class="mood-btn" data-mood="chaotic" type="button">Chaotic</button>
+      <button class="mood-btn" data-mood="main" type="button">Main Character</button>
+      <button class="mood-btn" data-mood="sleep" type="button">I need sleep</button>
+    </div>
+    <p class="mood__output" id="mood-output" aria-live="polite">Your wish will show up here.</p>
+    <div class="mood-visual" id="mood-visual" aria-live="polite" aria-label="Your selected birthday mood">
+      <img id="mood-image" src="assets/images/cute.png" alt="">
+      <span class="mood-visual__spark mood-visual__spark--one">✦</span>
+      <span class="mood-visual__spark mood-visual__spark--two">♡</span>
+    </div>
+  </section>
+
+  <!-- SECTION 6 — BIG FINAL SURPRISE (CANDLE) -->
+  <section class="section finale" id="section-finale" data-section-index="6">
+    <p class="finale__pre">Before you go…</p>
+    <h2 class="finale__title">Make a wish, Urvi.</h2>
+
+    <button class="candle-stage" id="candle" type="button" aria-label="Blow out the candle">
+      <svg viewBox="0 0 160 220" class="candle-svg" aria-hidden="true">
+        <ellipse class="candle-shadow" cx="80" cy="205" rx="60" ry="10"/>
+        <rect class="candle-cake" x="10" y="140" width="140" height="60" rx="10"/>
+        <rect class="candle-cake-top" x="10" y="130" width="140" height="18" rx="9"/>
+        <rect class="candle-stick" x="72" y="70" width="16" height="64" rx="4"/>
+        <g class="flame-group" id="flame-group">
+          <path class="flame" d="M80 20c10 14 14 24 14 33 0 12-9 21-14 21s-14-9-14-21c0-9 4-19 14-33z"/>
+        </g>
+      </svg>
+    </button>
+    <p class="candle-hint" id="candle-hint">click the flame</p>
+
+    <div class="finale-reveal" id="finale-reveal">
+      <p class="finale-reveal__big">Happy Birthday, Urvi! ♡</p>
+      <p class="finale-reveal__lines">Keep smiling.<br>Keep laughing.<br>Keep being wonderfully you.</p>
+      <p class="handwritten finale-reveal__sign">With love,<br>Shifa</p>
+    </div>
+  </section>
+
+  <!-- SECTION 7 — FINAL CTA -->
+  <section class="section cta-final" id="section-cta" data-section-index="7">
+    <p class="cta-final__eyebrow">Here’s to you, Urvi —<br>and to all the moments still waiting for us.</p>
+    <p class="cta-final__sub">Happy birthday, with all my love. — Shifa</p>
+    <a class="credit" href="https://www.instagram.com/amanmauryas" target="_blank" rel="noopener noreferrer">Designed by Someone for Someone <span aria-hidden="true">↗</span></a>
+  </section>
+
+</main>
+
+<audio id="birthday-audio" src="assets/audio/happytune.mp3" preload="auto" autoplay loop></audio>
+<button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Toggle sound">
+  <span class="sound-toggle__icon">♪</span>
+</button>
+
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.2/confetti.browser.min.js"></script>
+
+<script src="js/three-scene.js"></script>
+<script src="js/animations.js"></script>
+<script src="js/surprises.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
