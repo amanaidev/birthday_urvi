@@ -1,4 +1,4 @@
-# Happy Birthday, Urvi — a little digital experience from Shifa
+# Happy Birthday, Friend's name — a little digital experience from Your Name
 
 A single-page, interactive birthday website. No backend, no build step — just open `index.html`.
 
@@ -26,8 +26,8 @@ Everything personal lives in one place — `js/main.js`:
 
 ```js
 const birthdayConfig = {
-  sender: "Shifa",
-  recipient: "Urvi",
+  sender: "Your Name",
+  recipient: "Friend's name",
   date: "9 September",
   createYoursUrl: "#create-yours",
 };

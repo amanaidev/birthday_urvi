@@ -344,7 +344,7 @@ main { position: relative; z-index: 1; }
 .reveal { opacity: 0; transform: translateY(16px); }
 
 /* ========================================================================== 
-   SECTION 3 — EDP MEMORY CAROUSEL
+   SECTION 3 — __ MEMORY CAROUSEL
    ========================================================================== */
 .memories { text-align: center; overflow: hidden; }
 .memories__eyebrow { color: var(--coral-dark); font-size: .78rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1rem; }

@@ -19,7 +19,7 @@
     }, opts || {}));
   }
 
-  /* ---------------- SCROLL-AWARE EDP MEMORY CAROUSEL ---------------- */
+  /* ---------------- SCROLL-AWARE __ MEMORY CAROUSEL ---------------- */
   const carousel = document.getElementById("memory-carousel");
   const slides = carousel ? carousel.querySelectorAll(".memory-slide") : [];
   const carouselDots = carousel ? carousel.querySelectorAll(".carousel-dot") : [];
@@ -107,8 +107,8 @@
   /* ---------------- MOOD GENERATOR ---------------- */
   const moodWishes = {
     cute: "Soft pink skies, extra cake and every sweet thing you deserve. ♡",
-    chaotic: "EDP might be ending, but the chaos and the memories are absolutely staying.",
-    main: "Cue the spotlight: today, Urvi is the entire main character energy.",
+    chaotic: "__ might be ending, but the chaos and the memories are absolutely staying.",
+    main: "Cue the spotlight: today, Friend's name is the entire main character energy.",
     sleep: "A quiet reset, a soft blanket and a year with gentler days ahead.",
   };
 

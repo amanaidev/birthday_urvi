@@ -5,9 +5,9 @@
    ========================================================================== */
 
 const birthdayConfig = {
-  sender: "Shifa",
-  recipient: "Urvi",
-  date: "9 September",
+  sender: "Your Name here",
+  recipient: "Friend Name",
+  date: "Birthday date",
   createYoursUrl: "#create-yours",
 };
 
