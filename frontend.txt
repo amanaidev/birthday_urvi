@@ -1,0 +1,819 @@
+ITSYOURDAY.FUN — DESIGN SYSTEM & UI DIRECTION
+
+Document purpose
+
+This document explains the visual language and UI intent of the
+itsyourday.fun website.
+
+Treat this document and the supplied reference image as the design
+source of truth for the frontend.
+
+The goal is NOT to reproduce a generic SaaS landing page.
+
+The goal is to create a playful digital-greeting brand that feels: -
+warm - cheerful - emotional - youthful - polished - trustworthy -
+visually memorable
+
+Reference image characteristics
+
+The supplied reference is a 1227 x 1282 px desktop landing-page
+composition.
+
+It uses: - white as the dominant surface - very soft pastel background
+decoration - dark navy typography - pink/coral primary actions -
+colorful greeting-card illustrations - rounded cards and controls -
+generous whitespace - clear left-to-right hierarchy - playful hand-drawn
+decorative elements - subtle shadows and borders - strong visual
+separation between sections without hard boxed layouts
+
+The visual system should feel closer to a premium digital greeting-card
+product than a conventional software dashboard.
+
+================================================ 1. CORE DESIGN
+PRINCIPLES ================================================
+
+1.1 Emotion before functionality
+
+The first visual impression should communicate:
+
+“Someone made this to make another person happy.”
+
+The interface should therefore feel human and celebratory.
+
+Avoid: - corporate blue SaaS styling - dark dashboards - dense
+information architecture - excessive glassmorphism - excessive
+gradients - overly technical UI - generic stock photography
+
+Prefer: - illustrations - soft colors - rounded geometry - friendly
+typography - small emotional details - whitespace - visual storytelling
+
+1.2 Strong hierarchy
+
+The homepage has a very deliberate hierarchy:
+
+1.  Brand/navigation
+2.  Hero message
+3.  Search/discovery
+4.  Occasion discovery
+5.  Featured templates
+6.  How it works
+7.  Final emotional CTA
+8.  Footer
+
+Do not flatten these sections into visually equal blocks.
+
+The hero and featured templates should receive the strongest visual
+attention.
+
+1.3 White space is a design element
+
+Do not fill every empty area.
+
+The reference intentionally uses large white spaces around: - headings -
+cards - category icons - hero content - CTA section
+
+Spacing should make the page feel premium and calm.
+
+Use generous vertical rhythm rather than tightly packed sections.
+
+1.4 Rounded, soft geometry
+
+The design language is based on rounded shapes.
+
+Use approximately: - 12–16px radius for small UI - 16–20px radius for
+cards - 20–28px radius for major cards/sections - fully rounded pills
+for tags and buttons
+
+Avoid sharp rectangular components unless semantically necessary.
+
+1.5 Decorative elements should feel organic
+
+Background decoration should not look like standard CSS blobs randomly
+placed on the page.
+
+Use: - soft pastel clouds - flowing waves - organic circles - hand-drawn
+lines - hearts - confetti - paper-plane paths - small floating shapes
+
+Decoration should support the celebration theme without interfering with
+content.
+
+================================================ 2. COLOR SYSTEM
+================================================
+
+The reference is primarily white with pastel accents.
+
+Suggested semantic palette:
+
+–color-background: #FFFFFF –color-surface: #FFFFFF –color-text-primary:
+#10213A –color-text-secondary: #667085
+
+Primary brand: –color-primary: #F43F72 –color-primary-hover: #E73568
+–color-primary-soft: #FDE7EF
+
+Supporting pastel colors: –color-pastel-pink: #FDECEF
+–color-pastel-blue: #EAF4FF –color-pastel-green: #EAF8EF
+–color-pastel-yellow: #FFF6DF –color-pastel-peach: #FFF0E7
+–color-pastel-lavender: #F1EEFF
+
+Important: These are design-direction values, not mandatory
+pixel-perfect values.
+
+The implementation should visually match the reference rather than
+mechanically applying every hex value.
+
+Use strong color primarily for: - primary CTA - active navigation -
+important links - small accents
+
+Large surfaces should remain very light.
+
+2.1 Gradient usage
+
+Gradients are allowed but should be subtle.
+
+Use gradients primarily for: - decorative background areas - highlighted
+heading text - pastel CTA backgrounds
+
+Do not use saturated gradients across entire sections.
+
+================================================ 3. TYPOGRAPHY
+================================================
+
+Typography is one of the most important parts of this design.
+
+Use a friendly modern geometric/rounded sans-serif.
+
+Good candidates: - Plus Jakarta Sans - Nunito Sans - Inter as fallback
+
+Use a font stack rather than depending on one unavailable font.
+
+Visual characteristics: - bold headings - rounded letterforms - high
+readability - slightly playful but professional
+
+Hierarchy:
+
+Eyebrow: - uppercase - small - bold/semibold - pink - noticeable letter
+spacing
+
+Hero heading: - very large - heavy/bold - dark navy - tight line
+height - two-line composition
+
+Accent heading: - pink/coral - can use a subtle gradient
+
+Section heading: - dark navy - bold - large but clearly smaller than
+hero
+
+Body: - gray/navy - medium line height - comfortable reading width
+
+Navigation: - compact - semibold - dark navy - active item pink
+
+Approximate desktop scale:
+
+Hero heading: 56–68px
+
+Section heading: 32–40px
+
+Body: 16–18px
+
+Navigation: 14–15px
+
+Small labels: 12–14px
+
+These values should scale down responsively.
+
+3.1 Text width
+
+Do not allow hero paragraphs to span the entire page.
+
+The hero copy should occupy a constrained width so the text feels
+editorial.
+
+Example: max-width: 560px
+
+Section descriptions should also remain short and readable.
+
+================================================ 4. GLOBAL PAGE WIDTH
+================================================
+
+Use a centered content container.
+
+Recommended: max-width: 1200–1180px approximately
+
+Desktop horizontal padding: 24–32px
+
+At very wide screens: do not stretch content indefinitely.
+
+The reference has a contained central composition while decorative
+backgrounds can extend to the viewport edges.
+
+================================================ 5. HEADER / NAVBAR
+================================================
+
+The header is clean and mostly white.
+
+Layout:
+
+LEFT Gift icon/logo itsyourday.fun
+
+CENTER Home Templates Occasions Create Custom How It Works
+
+RIGHT Search Log In Sign Up
+
+Brand: - gift emoji/icon or custom gift mark - dark navy wordmark -
+primary pink associated with the icon
+
+Active navigation: pink text
+
+Inactive navigation: dark navy
+
+Login: white/light button subtle border rounded pill
+
+Sign Up: solid pink/coral white text rounded pill
+
+Header should not visually dominate the hero.
+
+Height should feel compact and premium.
+
+Desktop: horizontal navigation.
+
+Mobile: - brand remains visible - hamburger menu - navigation becomes a
+mobile drawer/dropdown - primary CTA remains easy to reach
+
+================================================ 6. HERO SECTION
+================================================
+
+The hero is the most important area.
+
+Use a two-column desktop layout.
+
+LEFT: content
+
+RIGHT: large celebration illustration
+
+Suggested proportions: left: approximately 45% right: approximately 55%
+
+The hero should have enough height to feel like the visual opening of
+the site, but should not consume the entire first screen.
+
+  ------------------
+  6.1 Hero eyebrow
+  ------------------
+
+Text:
+
+MAKE SOMEONE’S DAY SPECIAL
+
+Style: - uppercase - pink - small - semibold/bold - slight letter
+spacing
+
+It establishes the emotional purpose before the main headline.
+
+  ------------------
+  6.2 Hero heading
+  ------------------
+
+Text:
+
+Send Wishes For Every Occasion
+
+First line: dark navy
+
+Second line: pink/coral
+
+The second line is visually stronger through color rather than excessive
+font size.
+
+Do not use a giant single-line heading.
+
+The two-line structure is essential to the composition.
+
+  --------------------
+  6.3 Hero paragraph
+  --------------------
+
+Text:
+
+Beautiful, personalized wishes for birthdays, anniversaries, festivals
+and all of life’s special moments.
+
+Style: - muted navy/gray - 16–18px - relaxed line height - constrained
+width
+
+  ----------------------
+  6.4 Search component
+  ----------------------
+
+This is an important conversion/discovery element.
+
+Structure:
+
+[ search icon ] [ input text ……………. ] [ Search ]
+
+Outer container: - white - subtle gray border - soft shadow - pill/large
+rounded rectangle - approximately 52–58px high
+
+Search button: - solid pink - white text - rounded pill - visually
+attached to the search field
+
+Placeholder: Search templates (e.g. Birthday, Anniversary, Thank You…)
+
+The search field should feel like one unified component rather than two
+unrelated buttons.
+
+  -------------------
+  6.5 Trending tags
+  -------------------
+
+Under search:
+
+Trending: Birthday Anniversary Love Thank You Good Luck Festival
+
+“Trending:” is plain text and slightly stronger.
+
+Tags are: - light pastel background - rounded pill - small text - dark
+navy - clickable
+
+Do not make tags visually louder than the search button.
+
+================================================ 7. HERO ILLUSTRATION
+================================================
+
+The hero illustration is critical to the brand identity.
+
+It should feel like a premium greeting-card illustration.
+
+Composition: - large pink gift box - open box/lid - ribbon - greeting
+card - hearts - confetti - colorful small decorative shapes
+
+Card message:
+
+Small Wishes Big Happiness
+
+Additional decorative handwritten text:
+
+Spread Smiles Always :)
+
+The illustration should occupy substantial visual area but remain
+balanced against the left-side copy.
+
+Important: Do not replace this with a generic business stock photo.
+
+Use a high-quality illustration asset or designed visual.
+
+The illustration can have: - soft shadows - subtle depth - slight
+rotation - organic edges
+
+Do not make it photorealistic.
+
+================================================ 8. OCCASION NAVIGATION
+================================================
+
+Immediately after the hero, show the occasion discovery row.
+
+Items:
+
+Birthday Anniversary Love Friendship Thank You Congratulations Good Luck
+Festival Get Well Soon More
+
+Each item consists of:
+
+[ pastel rounded icon container ] icon label
+
+Example icons: Birthday → cake Anniversary → heart Love → heart
+Friendship → people Thank You → envelope Congratulations → trophy Good
+Luck → clover Festival → diya Get Well Soon → flower More → ellipsis
+
+Icon containers: - approximately 56–68px - pastel backgrounds - rounded
+square/circle - centered icon
+
+Labels: - dark navy - semibold - small
+
+Spacing: The row should feel airy, not crowded.
+
+Mobile: horizontal scrolling is preferred.
+
+Do not wrap into a dense multi-row grid on small screens.
+
+================================================ 9. FEATURED TEMPLATES
+================================================
+
+This is the main product-discovery section.
+
+Header:
+
+Featured Templates
+
+Subtext:
+
+Choose from our handpicked collection of beautiful wishes.
+
+Right side:
+
+Explore All Templates →
+
+On desktop: heading/subheading on left explore link on right
+
+  --------------------
+  9.1 Template cards
+  --------------------
+
+The reference uses five cards across desktop.
+
+Each card contains:
+
+1.  large illustration/image
+2.  title row
+3.  small circular arrow button
+
+Example titles:
+
+Birthday Wishes Anniversary Wishes Friendship Wishes Congratulations
+Festival Wishes
+
+Card characteristics: - white background - subtle border - subtle
+shadow - rounded corners - image area with rounded top corners - clean
+bottom content area
+
+Approximate desktop card: - width around 200–220px depending on
+container - image aspect ratio around 1:1 - title area around 55–70px
+
+The image is the visual focus.
+
+Do not put large descriptions inside each card.
+
+9.2 Template artwork
+
+Template images should look like actual greeting cards.
+
+Examples:
+
+Birthday: cake + balloons + Happy Birthday
+
+Anniversary: red/pink hearts + Happy Anniversary
+
+Friendship: friends together + warm sky
+
+Congratulations: trophy + confetti
+
+Festival: diyas + deep festive colors
+
+The artwork should feel consistent as a collection but each template can
+have its own personality.
+
+9.3 Card interaction
+
+On hover: - slight upward movement - slight image scale - subtle shadow
+increase - arrow button remains visually clear
+
+Do not use dramatic 3D effects.
+
+The card should feel tactile, not flashy.
+
+================================================ 10. HOW IT WORKS
+================================================
+
+Section title:
+
+How It Works
+
+Subtitle:
+
+Send heartfelt wishes in just a few simple steps.
+
+Three cards:
+
+01 — Choose a Template Browse our collection for any occasion.
+
+02 — Personalize It Add your own message and make it special.
+
+03 — Share & Spread Joy Send it instantly to make someone smile.
+
+Each card has a different pastel background.
+
+Card 1: soft pink
+
+Card 2: soft blue
+
+Card 3: soft green
+
+Each card includes: - numbered circle - large icon - title - short
+description
+
+Layout: three cards in one row on desktop.
+
+Mobile: stack vertically.
+
+The cards should be wide and comfortable, not small icon boxes.
+
+================================================ 11. FINAL CTA SECTION
+================================================
+
+This section is emotionally important.
+
+It should not look like another ordinary content section.
+
+Use a flowing pastel background.
+
+Concept: soft waves crossing horizontally.
+
+Colors: - pale blue - pale pink - pale peach - pale lavender
+
+Centered content:
+
+Every Occasion Deserves a Special Wish
+
+Start exploring and make someone’s day brighter today!
+
+Button:
+
+Browse All Templates →
+
+Decorative elements: - paper airplane - dotted flight path - small
+heart - handwritten phrase - organic pastel shapes
+
+Handwritten phrase:
+
+Good Things Happen with Kindness
+
+The CTA should feel like the end of a greeting card.
+
+Do not use a dark footer-like CTA.
+
+================================================ 12. DECORATIVE LANGUAGE
+================================================
+
+The design uses two visual languages:
+
+A. Clean UI B. Hand-drawn celebration graphics
+
+Clean UI: - navbar - search - cards - buttons - category labels
+
+Hand-drawn: - airplane - heart - dotted path - handwritten text -
+confetti - organic background shapes
+
+The combination is what makes the brand playful.
+
+Do not apply hand-drawn styling to every UI element.
+
+Keep functional UI clean and readable.
+
+================================================ 13. BUTTONS
+================================================
+
+Primary button:
+
+Pink background White text Rounded pill
+
+Examples: Search Sign Up Browse All Templates Personalize
+
+Height: approximately 44–50px for standard buttons.
+
+Large CTA: approximately 48–54px.
+
+Hover: slightly darker pink + subtle lift.
+
+Avoid: - square buttons - excessive gradients - giant full-width desktop
+buttons
+
+Secondary button:
+
+White/light background Dark navy text Subtle border
+
+Use for: Log In secondary navigation
+
+Buttons should have clear hierarchy.
+
+================================================ 14. CARDS AND SURFACES
+================================================
+
+Card style:
+
+background: white border: very subtle shadow: soft radius: 16–24px
+
+Avoid heavy shadows.
+
+The reference has a soft “floating paper/card” feeling.
+
+A useful conceptual shadow:
+
+0 4px 20px rgba(16, 33, 58, 0.06)
+
+Keep shadows subtle.
+
+================================================ 15. RESPONSIVE DESIGN
+================================================
+
+Desktop: - max-width centered layout - two-column hero - 5 featured
+template cards - horizontal occasion row - 3 How It Works cards
+
+Tablet: - reduce hero gap - template grid can become 2–3 columns -
+maintain generous spacing
+
+Mobile: - stacked hero - illustration moves below hero copy - search
+becomes full width - trending tags can horizontally scroll - occasion
+row horizontally scrolls - templates become 1-column or compact 2-column
+depending on screen width - How It Works stacks - CTA decorations reduce
+in number - navbar becomes hamburger
+
+Important: There must be no horizontal page overflow.
+
+Decorative shapes must not create accidental scroll width.
+
+================================================ 16. MOTION
+================================================
+
+Animation should be subtle and purposeful.
+
+Allowed: - fade-in on section entrance - small upward card reveal -
+hover lift - image scale on card hover - gentle floating decorative
+elements - button hover transitions
+
+Avoid: - constant bouncing - excessive parallax - huge page
+transitions - distracting animations - animations that delay content
+access
+
+Respect:
+
+prefers-reduced-motion
+
+When reduced motion is enabled: - disable floating animations - reduce
+transitions - keep content immediately accessible
+
+================================================ 17. ICONOGRAPHY
+================================================
+
+Icons should be simple and friendly.
+
+Use a consistent icon family.
+
+Good choice: Lucide-style line icons for functional UI.
+
+Occasion icons can use: - emoji - custom illustrated icons - simple
+colorful SVGs
+
+Do not mix five unrelated icon styles.
+
+================================================ 18. IMAGERY
+================================================
+
+The product is illustration-driven.
+
+Priority:
+
+1.  custom greeting-card artwork
+2.  branded illustrations
+3.  clean SVG/PNG assets
+4.  stock imagery only if absolutely necessary
+
+Avoid generic corporate stock photos.
+
+Template previews should be treated as product assets.
+
+Use: - WebP/AVIF where supported - responsive sizing - lazy loading
+below the fold - explicit width/height to reduce layout shift -
+meaningful alt text
+
+================================================ 19. ACCESSIBILITY
+================================================
+
+Maintain the playful appearance without sacrificing usability.
+
+Requirements: - semantic HTML - proper heading hierarchy - keyboard
+navigation - visible focus states - accessible labels - sufficient
+contrast - alt text - reduced-motion support - touch targets large
+enough for mobile
+
+Do not use color alone to communicate state.
+
+================================================ 20. UX TONE
+================================================
+
+Copy should sound human.
+
+Preferred: “Make someone’s day special.” “Spread smiles.” “Choose a
+template.” “Add your own message.” “Start exploring.”
+
+Avoid: “Optimize your celebration workflow.” “Create a high-converting
+event.” “Manage your greeting assets.”
+
+This is a consumer emotional product, not enterprise software.
+
+================================================ 21. IMPORTANT PRODUCT
+UI DISTINCTION ================================================
+
+There are two different visual systems.
+
+PUBLIC MARKETING UI
+
+Homepage Templates catalogue Occasions How It Works Create Custom
+
+Style: playful pastel illustrated emotional spacious
+
+CREATION / EDITOR UI
+
+Personalization Preview Template selection Media upload Publishing
+
+Style: still playful, but more functional.
+
+Do not make the creation interface as decorative as the homepage.
+
+The user needs to complete a task easily.
+
+================================================ 22. TEMPLATE SYSTEM
+VISUAL RULE ================================================
+
+Templates themselves are allowed to be radically different.
+
+For example:
+
+birthday-01: colorful balloons + cake
+
+birthday-02: minimal pastel flowers
+
+birthday-03: dark cinematic typography
+
+birthday-04: photo-memory timeline
+
+birthday-05: interactive surprise box
+
+They do NOT need identical layouts.
+
+What must remain consistent is the surrounding product UI and the
+template data contract.
+
+Conceptually:
+
+Template data ↓ Template resolver ↓ Template renderer ↓ Unique visual
+experience
+
+================================================ 23. IMPLEMENTATION
+GUIDANCE FOR CODEX ================================================
+
+When implementing from this document:
+
+1.  First reproduce the homepage composition.
+2.  Do not invent a different design system.
+3.  Build reusable UI primitives.
+4.  Keep template artwork/data separate from page layout.
+5.  Do not duplicate template rendering logic.
+6.  Use CSS variables for design tokens.
+7.  Keep decorative elements independent from content layout.
+8.  Ensure decorations cannot cause horizontal overflow.
+9.  Use responsive breakpoints intentionally.
+10. Test mobile before considering the design complete.
+
+Suggested CSS tokens:
+
+–color-primary –color-primary-hover –color-text-primary
+–color-text-secondary –color-surface –color-border –color-pastel-pink
+–color-pastel-blue –color-pastel-green –color-pastel-yellow
+–color-pastel-peach –color-pastel-lavender
+
+Suggested layout tokens:
+
+–container-max –section-gap –card-radius –button-radius –shadow-soft
+
+Do not scatter magic numbers throughout the CSS.
+
+================================================ 24. WHAT THE FINAL PAGE
+SHOULD FEEL LIKE ================================================
+
+Imagine a high-quality digital greeting-card store combined with a
+modern consumer web product.
+
+First impression:
+
+“That’s cute. I want to send one.”
+
+Second impression:
+
+“There are many occasions and templates.”
+
+Third impression:
+
+“I can personalize this easily.”
+
+Final impression:
+
+“This feels like a thoughtful experience, not just a website.”
+
+That emotional progression is the primary UI objective.
+
+================================================ 25. NON-NEGOTIABLES
+================================================
+
+DO: - follow the supplied reference closely - preserve the white/pastel
+visual balance - use dark navy typography - use pink as the primary
+action color - use large greeting-card artwork - maintain generous
+whitespace - use rounded geometry - make template cards visually
+prominent - keep the interface friendly - make mobile behavior excellent
+
+DO NOT: - turn this into a SaaS dashboard - use dark mode as the
+default - overuse gradients - overuse glassmorphism - fill empty space
+unnecessarily - use random stock photography - use huge decorative
+elements over text - create inconsistent card styles - use excessive
+animations - make every section look like a separate boxed container -
+duplicate entire pages for every wish template
+
+The reference image is the visual north star. The design system should
+remain coherent even as the number of occasions and wish templates
+grows.

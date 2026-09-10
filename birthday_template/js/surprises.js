@@ -119,7 +119,7 @@
   const moodImages = {
     cute: { src: "assets/images/cute.png", alt: "Cute birthday mood illustration" },
     chaotic: { src: "assets/images/chaotic.png", alt: "Chaotic birthday mood illustration" },
-    main: { src: "assets/images/main_character.png", alt: "Main character birthday mood illustration" },
+    main: { src: "assets/images/cute.png", alt: "Main character birthday mood illustration" },
     sleep: { src: "assets/images/i_need_sleep.png", alt: "Sleepy birthday mood illustration" },
   };
 

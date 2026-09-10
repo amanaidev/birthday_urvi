@@ -4,21 +4,45 @@
    templated by a birthday-website generator product.
    ========================================================================== */
 
-const birthdayConfig = {
-  sender: "Your Name here",
-  recipient: "Friend Name",
-  date: "Birthday date",
-  createYoursUrl: "#create-yours",
-};
+const birthdayConfig = (() => {
+  const defaults = { sender: "Your Name", recipient: "Friend's name", message: "", date: "A special day", createYoursUrl: "../templates.html" };
+  try {
+    const savedWish = JSON.parse(sessionStorage.getItem("itsyourday-wish"));
+    if (savedWish?.templateId === "birthday-story") {
+      return { ...defaults, sender: savedWish.sender || defaults.sender, recipient: savedWish.recipient || defaults.recipient, message: savedWish.message || "" };
+    }
+  } catch { /* Keep the standalone template usable with its default copy. */ }
+  return defaults;
+})();
 
 (function () {
   "use strict";
 
-  // Apply config to any [data-config] element, if present in markup.
-  document.querySelectorAll("[data-config]").forEach((el) => {
-    const key = el.getAttribute("data-config");
+  document.querySelectorAll("[data-personal]").forEach((el) => {
+    const key = el.getAttribute("data-personal");
     if (birthdayConfig[key]) el.textContent = birthdayConfig[key];
   });
+  const customMessage = document.querySelector("[data-personal-message]");
+  if (customMessage && birthdayConfig.message) customMessage.textContent = birthdayConfig.message;
+  // Retain the authored experience while ensuring any remaining placeholder
+  // references (including accessible labels) use the recipient's real name.
+  const replacePlaceholders = (value) => value
+    .replaceAll("Friend's name", birthdayConfig.recipient)
+    .replaceAll("Your Name", birthdayConfig.sender)
+    .replaceAll("__", "our story");
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode: (node) => ["SCRIPT", "STYLE"].includes(node.parentElement?.tagName) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT,
+  });
+  const textNodes = [];
+  while (walker.nextNode()) textNodes.push(walker.currentNode);
+  textNodes.forEach((node) => { node.nodeValue = replacePlaceholders(node.nodeValue); });
+  document.querySelectorAll("[alt], [aria-label]").forEach((el) => {
+    ["alt", "aria-label"].forEach((attribute) => {
+      if (el.hasAttribute(attribute)) el.setAttribute(attribute, replacePlaceholders(el.getAttribute(attribute)));
+    });
+  });
+  document.title = `Happy Birthday, ${birthdayConfig.recipient} — from ${birthdayConfig.sender}`;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", `A little digital birthday experience, made by ${birthdayConfig.sender} for ${birthdayConfig.recipient}.`);
 
   const createYoursBtn = document.getElementById("create-yours");
   if (createYoursBtn && birthdayConfig.createYoursUrl) {

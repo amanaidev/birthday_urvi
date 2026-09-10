@@ -1,214 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Happy Birthday, Friend's name — from Your Name</title>
-<meta name="description" content="A little digital birthday experience, made by Your Name for Friend's name." />
-
-<!-- Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="css/style.css" />
-
-<!-- Vercel Web Analytics -->
-<script>
-  window.va = window.va || function () { 
-    (window.vaq = window.vaq || []).push(arguments); 
-  };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>itsyourday.fun — Send wishes that feel special</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
 
-<!-- Minimal top navigation -->
-<header class="topnav" role="banner">
-  <div class="topnav__mark" aria-hidden="true">Your Name <span class="topnav__arrow">→</span> Friend's name</div>
-  <div class="topnav__date">9 September</div>
-  <nav class="progress" aria-label="Experience progress">
-    <span class="progress__dot" data-section="0"></span>
-    <span class="progress__dot" data-section="1"></span>
-    <span class="progress__dot" data-section="2"></span>
-    <span class="progress__dot" data-section="3"></span>
-    <span class="progress__dot" data-section="4"></span>
-    <span class="progress__dot" data-section="5"></span>
-    <span class="progress__dot" data-section="6"></span>
-    <span class="progress__dot" data-section="7"></span>
-  </nav>
-</header>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <a class="logo" href="index.html" aria-label="itsyourday.fun home">
+                <i class="fa-solid fa-gift"></i>
+                <div>itsyour<span>day.fun</span></div>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation"><i class="fa-solid fa-bars"></i></button>
+            
+            <nav id="site-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="templates.html">Templates</a></li>
+                    <li><a href="templates.html">Occasions</a></li>
+                    <li><a href="create-custom.html">Create Custom</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                </ul>
+            </nav>
 
-<!-- Three.js canvas sits behind everything -->
-<canvas id="balloon-canvas" aria-hidden="true"></canvas>
+            <div class="header-actions">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <a class="btn btn-outline" href="templates.html">Browse</a>
+                <a class="btn btn-primary" href="templates.html">Start creating</a>
+            </div>
+        </header>
 
-<main id="top">
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Section -->
+            <section class="hero">
+                <!-- Hero Background Doodles (Blobs & SVGs) -->
+                <div class="hero-bg-blobs"></div>
+                <div class="hero-doodles">
+                    <i class="fa-solid fa-heart doodle-heart" style="top: 10%; left: 45%; color: #3b82f6; font-size: 1.5rem; transform: rotate(-15deg);"></i>
+                    <i class="fa-solid fa-heart doodle-heart" style="top: 25%; right: 10%; color: #3b82f6; font-size: 1rem; transform: rotate(20deg);"></i>
+                    <i class="fa-solid fa-heart doodle-heart" style="bottom: 20%; right: 40%; color: #f43f5e; font-size: 1.2rem; transform: rotate(10deg);"></i>
+                    <svg class="doodle-star" style="top: 15%; right: 25%; width: 20px;" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    <svg class="doodle-star" style="bottom: 10%; right: 5%; width: 25px;" viewBox="0 0 24 24" fill="#f59e0b"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
 
-  <!-- SECTION 1 — HERO -->
-  <section class="section hero" id="section-hero" data-section-index="0">
-    <div class="hero__inner">
-      <p class="eyebrow js-hero-in">9 September</p>
-      <h1 class="hero__heading">
-        <span class="js-hero-in">Happy Birthday,</span>
-        <span class="js-hero-in hero__name">Friend's name<span class="hero__dot">.</span></span>
-      </h1>
-      <p class="hero__subtitle js-hero-in">From the very first day of __<br>to the very last — you made it feel like home.</p>
-      <p class="handwritten js-hero-in">— from Your Name, with love ♡</p>
-      <button class="btn btn--primary js-hero-in" id="start-surprise" type="button">
-        Start the surprise <span class="btn__arrow">→</span>
-      </button>
+                <div class="hero-content">
+                    <div class="hero-subtitle">Make Someone's Day Special</div>
+                    <h1 class="hero-title">
+                        Send Wishes<br>
+                        For <span class="highlight">Every Occasion</span>
+                    </h1>
+                    <p class="hero-desc">Beautiful, personalized wishes for birthdays, anniversaries, festivals and all of life's special moments.</p>
+                    
+                    <div class="search-bar">
+                        <i class="fa-solid fa-magnifying-glass search-input-icon"></i>
+                        <input type="text" id="searchInput" placeholder="Search templates (e.g. Birthday, Anniversary, Thank You...)">
+                        <button class="btn btn-primary" id="searchBtn">Search</button>
+                    </div>
+
+                    <div class="trending">
+                        <span class="trending-label">Trending:</span>
+                        <button class="tag" type="button">Birthday</button>
+                        <button class="tag" type="button">Anniversary</button>
+                        <button class="tag" type="button">Love</button>
+                        <button class="tag" type="button">Thank You</button>
+                        <button class="tag" type="button">Good Luck</button>
+                        <button class="tag" type="button">Festival</button>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="mock-graphic">
+                        <div class="mock-box">
+                            <div class="mock-card">
+                                <h3>Small<br>Wishes<br>Big<br>Happiness<br><i class="fa-solid fa-heart mock-heart"></i></h3>
+                            </div>
+                        </div>
+                        <div class="hero-right-text">
+                            Spread<br>Smiles<br>Always<br><i class="fa-regular fa-face-smile"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="categories">
+                <div class="category-item">
+                    <div class="cat-icon" style="background: #fff5f5;"><i class="fa-solid fa-cake-candles" style="color: #f43f5e;"></i></div>
+                    <span>Birthday</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon" style="background: #fff1f2;"><i class="fa-solid fa-heart" style="color: #f43f5e;"></i></div>
+                    <span>Anniversary</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon" style="background: #fdf2f8;"><i class="fa-solid fa-heart" style="color: #ec4899;"></i></div>
+                    <span>Love</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon" style="background: #eff6ff;"><i class="fa-solid fa-user-group" style="color: #3b82f6;"></i></div>
+                    <span>Friendship</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon" style="background: #ecfdf5;"><i class="fa-solid fa-envelope" style="color: #10b981;"></i></div>
+                    <span>Thank You</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon" style="background: #fefce8;"><i class="fa-solid fa-trophy" style="color: #eab308;"></i></div>
+                    <span>Congratulations</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon" style="background: #f0fdf4;"><i class="fa-solid fa-clover" style="color: #22c55e;"></i></div>
+                    <span>Good Luck</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon" style="background: #fffbeb;"><i class="fa-solid fa-fire-flame-curved" style="color: #f59e0b;"></i></div>
+                    <span>Festival</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon" style="background: #fef2f2;"><i class="fa-solid fa-spa" style="color: #ef4444;"></i></div>
+                    <span>Get Well Soon</span>
+                </div>
+                <div class="category-item">
+                    <div class="cat-icon" style="background: #f8fafc;"><i class="fa-solid fa-ellipsis" style="color: #64748b;"></i></div>
+                    <span>More</span>
+                </div>
+            </section>
+
+            <!-- Featured Templates -->
+            <section class="featured">
+                <div class="section-header">
+                    <div>
+                        <h2>Featured Templates</h2>
+                        <p>Choose from our handpicked collection of beautiful wishes.</p>
+                    </div>
+                    <a href="templates.html" class="explore-link">Explore All Templates <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="templates-grid">
+                    <a class="template-card" href="template-detail.html?id=birthday-story">
+                        <div class="template-img t-bg-1">A Birthday<br>Story</div>
+                        <div class="template-info">
+                            <h4>Birthday Story</h4>
+                            <span class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <a class="template-card" href="template-detail.html?id=anniversary-roses">
+                        <div class="template-img t-bg-2">Happy<br>Anniversary</div>
+                        <div class="template-info">
+                            <h4>Anniversary Wishes</h4>
+                            <span class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <a class="template-card" href="template-detail.html?id=friendship-sunshine">
+                        <div class="template-img t-bg-3">Good Friends<br>Make Life<br>Brighter</div>
+                        <div class="template-info">
+                            <h4>Friendship Wishes</h4>
+                            <span class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <a class="template-card" href="template-detail.html?id=congrats-confetti">
+                        <div class="template-img t-bg-4">You<br>Did It!</div>
+                        <div class="template-info">
+                            <h4>Congratulations</h4>
+                            <span class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                    <a class="template-card" href="template-detail.html?id=festival-diwali">
+                        <div class="template-img t-bg-5">Happy<br>Diwali</div>
+                        <div class="template-info">
+                            <h4>Festival Wishes</h4>
+                            <span class="arrow-btn"><i class="fa-solid fa-arrow-right"></i></span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <!-- How It Works -->
+            <section class="how-it-works" id="how-it-works">
+                <div class="section-header">
+                    <div>
+                        <h2>How It Works</h2>
+                        <p>Send heartfelt wishes in just a few simple steps.</p>
+                    </div>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step-card step-1">
+                        <div class="step-number">1</div>
+                        <div>
+                            <div class="step-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                            <div class="step-content">
+                                <h4>Choose a Template</h4>
+                                <p>Browse our collection for any occasion.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card step-2">
+                        <div class="step-number">2</div>
+                        <div>
+                            <div class="step-icon"><i class="fa-solid fa-pen"></i></div>
+                            <div class="step-content">
+                                <h4>Personalize It</h4>
+                                <p>Add your own message and make it special.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="step-card step-3">
+                        <div class="step-number">3</div>
+                        <div>
+                            <div class="step-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                            <div class="step-content">
+                                <h4>Share & Spread Joy</h4>
+                                <p>Send it instantly to make someone smile.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
-    <div class="hero__scroll-hint" aria-hidden="true">
-      <span></span>
-    </div>
-  </section>
 
-  <!-- SECTION 2 — A LITTLE MESSAGE -->
-  <section class="section message" id="section-message" data-section-index="1">
-    <div class="card card--paper reveal-group">
-      <p class="reveal card__salutation">Dear Friend's name,</p>
-      <p class="reveal card__line">I met you on the very first day of __, and somehow you became the person who understood me without me having to explain everything.</p>
-      <p class="reveal card__line">From every little chaos to every quiet moment, you have been the best support I could have asked for. On __’s last day, I just want you to know how grateful I am that it began with you.</p>
-      <p class="reveal card__line">And because today is your birthday too: I hope this next year gives back every bit of warmth, laughter and care you bring to the people around you.</p>
-      <p class="reveal handwritten card__sign">— Your Name</p>
-      <svg class="card__doodle" viewBox="0 0 64 56" aria-hidden="true">
-        <path d="M32 50C10 36 2 24 2 14 2 5 10 0 17 0c7 0 12 4 15 10C35 4 40 0 47 0c7 0 15 5 15 14 0 10-8 22-30 36z" />
-      </svg>
-    </div>
-  </section>
-
-  <!-- SECTION 3 — __ MEMORY CAROUSEL -->
-  <section class="section memories" id="section-memories" data-section-index="2">
-    <p class="memories__eyebrow">A tiny __ scrapbook</p>
-    <h2 class="section__title">The little moments that became our favourite ones.</h2>
-    <div class="memory-carousel" id="memory-carousel" aria-roledescription="carousel" aria-label="__ memories">
-      <div class="memory-carousel__viewport">
-        <article class="memory-slide is-active" aria-label="Memory 1 of 3">
-          <button class="memory-slide__image" type="button" aria-label="Open Friend's name's birthday memory"><img src="assets/images/Friend's name.jpg" alt="Friend's name smiling at her birthday celebration"><span>tap to open ✦</span></button>
-          <div class="memory-slide__reveal"><p class="memory-slide__tag">Chapter one</p><h3>A day for you</h3><p>Today is all about your smile, your warmth, and every little thing that makes you, Friend's name.</p></div>
-        </article>
-        <article class="memory-slide" aria-label="Memory 2 of 3">
-          <button class="memory-slide__image" type="button" aria-label="Open the second birthday memory"><img src="assets/images/image1.jpeg" alt="A colourful happy birthday cake with candles"><span>tap to open ✦</span></button>
-          <div class="memory-slide__reveal"><p class="memory-slide__tag">Chapter two</p><h3>Make a wish</h3><p>For all the bright, beautiful things waiting for you in the year ahead.</p></div>
-        </article>
-        <article class="memory-slide" aria-label="Memory 3 of 3">
-          <button class="memory-slide__image" type="button" aria-label="Open the final birthday memory"><img src="assets/images/image2.png" alt="A colourful birthday cake with glowing candles"><span>tap to open ✦</span></button>
-          <div class="memory-slide__reveal"><p class="memory-slide__tag">Chapter three</p><h3>More magic ahead</h3><p>__ ends here, but the laughter, the memories and our friendship are only getting started.</p></div>
-        </article>
-      </div>
-      <div class="memory-carousel__controls">
-        <button class="carousel-arrow" id="memory-prev" type="button" aria-label="Previous memory">←</button>
-        <div class="carousel-dots" aria-label="Choose a memory">
-          <button class="carousel-dot is-active" type="button" aria-label="Show memory 1"></button>
-          <button class="carousel-dot" type="button" aria-label="Show memory 2"></button>
-          <button class="carousel-dot" type="button" aria-label="Show memory 3"></button>
-        </div>
-        <button class="carousel-arrow" id="memory-next" type="button" aria-label="Next memory">→</button>
-      </div>
-    </div>
-  <p class="memories__hint">Keep scrolling — then tap a photo to open its little surprise ✦</p>
-  </section>
-
-  <!-- SECTION 3 — INTERACTIVE SURPRISE (GIFT) -->
-  <section class="section gift-section" id="section-gift" data-section-index="3">
-    <h2 class="section__title">Okay… there's one more thing.</h2>
-    <div class="gift-stage">
-      <button class="gift" id="gift-box" type="button" aria-label="Open your gift">
-        <svg class="gift__svg" viewBox="0 0 220 200" aria-hidden="true">
-          <rect class="gift__lid" x="20" y="52" width="180" height="34" rx="6"/>
-          <rect class="gift__base" x="30" y="86" width="160" height="100" rx="8"/>
-          <rect class="gift__ribbon-v" x="100" y="52" width="20" height="134"/>
-          <rect class="gift__ribbon-h" x="20" y="60" width="180" height="18"/>
-          <path class="gift__bow" d="M110 52c-6-22-34-24-34-6 0 10 16 12 34 6zm0 0c6-22 34-24 34-6 0 10-16 12-34 6z"/>
+    <!-- Footer CTA with Wavy Top Simulation and Doodles -->
+    <footer class="cta-section">
+        <!-- Paper Plane Doodle (Left) -->
+        <svg class="footer-doodle-left" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg">
+            <!-- Heart at start of trail -->
+            <path d="M25,125 C25,115 15,115 15,125 C15,135 25,145 25,125 Z" fill="none" stroke="#1e293b" stroke-width="2"/>
+            <!-- Dashed flight path -->
+            <path d="M30,120 C60,90 90,140 120,100 C140,70 160,80 175,60" fill="none" stroke="#1e293b" stroke-width="2" stroke-dasharray="6,6" />
+            <!-- Paper Plane -->
+            <path d="M175,60 L200,45 L180,80 Z" fill="none" stroke="#1e293b" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M175,60 L185,68 L180,80" fill="none" stroke="#1e293b" stroke-width="2" stroke-linejoin="round"/>
         </svg>
-      </button>
-      <p class="gift__hint">tap the gift</p>
-    </div>
-    <div class="gift-reveal" id="gift-reveal" aria-live="polite">
-      <p class="gift-reveal__big">A little celebration<br>for my favourite __ person.</p>
-      <p class="gift-reveal__small">May the next chapter be louder, lighter and full of all the beautiful things you deserve.</p>
-      <p class="gift-reveal__terms">P.S. You still have to keep being wonderfully you. ♡</p>
-    </div>
-  </section>
 
-  <!-- SECTION 4 — COMPLIMENT CARDS -->
-  <section class="section deserve" id="section-deserve" data-section-index="4">
-    <h2 class="section__title">Things Friend's name deserves today</h2>
-    <div class="deserve__rail">
-      <article class="deserve-card" style="--tilt:-4deg">A birthday as bright as her smile</article>
-      <article class="deserve-card" style="--tilt:3deg">People who show up for her</article>
-      <article class="deserve-card" style="--tilt:-2deg">All the cake, obviously</article>
-      <article class="deserve-card" style="--tilt:5deg">More beautiful memories after __</article>
-      <article class="deserve-card" style="--tilt:-3deg">A year that feels completely hers</article>
-    </div>
-  </section>
+        <!-- Handwritten Text Doodle (Right) -->
+        <div class="footer-doodle-right">
+            <svg class="accent-lines" viewBox="0 0 50 50">
+                <line x1="10" y1="25" x2="0" y2="15" stroke="#f43f5e" stroke-width="2" stroke-linecap="round"/>
+                <line x1="15" y1="40" x2="5" y2="35" stroke="#f43f5e" stroke-width="2" stroke-linecap="round"/>
+                <line x1="25" y1="50" x2="20" y2="40" stroke="#f43f5e" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <div class="handwritten-text">
+                Good<br>Things<br>Happen<br>with<br>Kindness
+                <br><i class="fa-regular fa-heart"></i>
+            </div>
+        </div>
 
-  <!-- SECTION 5 — MOOD GENERATOR -->
-  <section class="section mood" id="section-mood" data-section-index="5">
-    <h2 class="section__title">Pick your birthday mood</h2>
-    <div class="mood__options" role="group" aria-label="Birthday mood">
-      <button class="mood-btn" data-mood="cute" type="button">Cute</button>
-      <button class="mood-btn" data-mood="chaotic" type="button">Chaotic</button>
-      <button class="mood-btn" data-mood="main" type="button">Main Character</button>
-      <button class="mood-btn" data-mood="sleep" type="button">I need sleep</button>
-    </div>
-    <p class="mood__output" id="mood-output" aria-live="polite">Your wish will show up here.</p>
-    <div class="mood-visual" id="mood-visual" aria-live="polite" aria-label="Your selected birthday mood">
-      <img id="mood-image" src="assets/images/cute.png" alt="">
-      <span class="mood-visual__spark mood-visual__spark--one">✦</span>
-      <span class="mood-visual__spark mood-visual__spark--two">♡</span>
-    </div>
-  </section>
+        <h2>Every Occasion Deserves a Special Wish</h2>
+        <p>Start exploring and make someone's day brighter today!</p>
+        <a class="btn btn-primary" href="templates.html">Browse All Templates <i class="fa-solid fa-arrow-right" style="margin-left: 5px;"></i></a>
+        <div class="site-footer"><a href="index.html">itsyourday.fun</a><span>Made for moments that matter.</span><a href="create-custom.html">Create a custom wish</a></div>
+    </footer>
 
-  <!-- SECTION 6 — BIG FINAL SURPRISE (CANDLE) -->
-  <section class="section finale" id="section-finale" data-section-index="6">
-    <p class="finale__pre">Before you go…</p>
-    <h2 class="finale__title">Make a wish, Friend's name.</h2>
-
-    <button class="candle-stage" id="candle" type="button" aria-label="Blow out the candle">
-      <svg viewBox="0 0 160 220" class="candle-svg" aria-hidden="true">
-        <ellipse class="candle-shadow" cx="80" cy="205" rx="60" ry="10"/>
-        <rect class="candle-cake" x="10" y="140" width="140" height="60" rx="10"/>
-        <rect class="candle-cake-top" x="10" y="130" width="140" height="18" rx="9"/>
-        <rect class="candle-stick" x="72" y="70" width="16" height="64" rx="4"/>
-        <g class="flame-group" id="flame-group">
-          <path class="flame" d="M80 20c10 14 14 24 14 33 0 12-9 21-14 21s-14-9-14-21c0-9 4-19 14-33z"/>
-        </g>
-      </svg>
-    </button>
-    <p class="candle-hint" id="candle-hint">click the flame</p>
-
-    <div class="finale-reveal" id="finale-reveal">
-      <p class="finale-reveal__big">Happy Birthday, Friend's name! ♡</p>
-      <p class="finale-reveal__lines">Keep smiling.<br>Keep laughing.<br>Keep being wonderfully you.</p>
-      <p class="handwritten finale-reveal__sign">With love,<br>Your Name</p>
-    </div>
-  </section>
-
-  <!-- SECTION 7 — FINAL CTA -->
-  <section class="section cta-final" id="section-cta" data-section-index="7">
-    <p class="cta-final__eyebrow">Here’s to you, Friend's name —<br>and to all the moments still waiting for us.</p>
-    <p class="cta-final__sub">Happy birthday, with all my love. — Your Name</p>
-    <a class="credit" href="https://www.instagram.com/amanmauryas" target="_blank" rel="noopener noreferrer">Designed by Someone for Someone <span aria-hidden="true">↗</span></a>
-  </section>
-
-</main>
-
-<audio id="birthday-audio" src="assets/audio/happytune.mp3" preload="auto" autoplay loop></audio>
-<button class="sound-toggle" id="sound-toggle" type="button" aria-pressed="false" aria-label="Toggle sound">
-  <span class="sound-toggle__icon">♪</span>
-</button>
-
-<!-- Libraries -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-confetti/1.9.2/confetti.browser.min.js"></script>
-
-<script src="js/three-scene.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/surprises.js"></script>
-<script src="js/main.js"></script>
-
+    <script src="script/script.js"></script>
 </body>
 </html>
