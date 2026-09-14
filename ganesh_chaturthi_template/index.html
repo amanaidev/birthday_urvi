@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#170b12">
+<title>Happy Ganesh Chaturthi — ItsYourDay</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CBVKTZZBEW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CBVKTZZBEW');
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&display=swap');
+
+:root{
+  --gold:#f6d27a;
+  --gold2:#ffb73c;
+  --cream:#fff2d2;
+  --dark:#170a10;
+  --dark2:#2b1114;
+  --red:#e52e34;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 50% 5%, rgba(255,184,67,.12), transparent 28%),
+    linear-gradient(135deg,#10080d,#291014 48%,#0d0710);
+  color:var(--cream);
+  font-family:"DM Sans",sans-serif;
+  display:flex;
+  justify-content:center;
+  padding:22px 12px;
+}
+
+.card{
+  position:relative;
+  width:min(100%,720px);
+  min-height:1080px;
+  overflow:hidden;
+  border:1px solid rgba(246,210,122,.35);
+  border-radius:26px;
+  background:#1b0b0f;
+  box-shadow:0 25px 80px rgba(0,0,0,.65);
+}
+
+.art{
+  height:470px;
+  position:relative;
+  overflow:hidden;
+  background-image:url("assets/ganesh-reference.png");
+  background-size:100% auto;
+  background-position:center top;
+  background-repeat:no-repeat;
+}
+
+/* Darken the lower edge of the artwork so the transition feels natural. */
+.art:after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:150px;
+  background:linear-gradient(transparent,#1b0b0f);
+}
+
+.content{
+  position:relative;
+  margin-top:-2px;
+  padding:8px 42px 42px;
+  text-align:center;
+  background:
+    radial-gradient(circle at 50% 0,rgba(255,181,58,.09),transparent 34%),
+    linear-gradient(#1b0b0f,#13090d 72%,#160a0f);
+}
+
+.kicker{
+  font-family:Cinzel,serif;
+  font-size:15px;
+  letter-spacing:7px;
+  color:var(--gold);
+  margin:0 0 3px;
+}
+
+h1{
+  margin:0;
+  font-family:Cinzel,serif;
+  font-size:clamp(36px,7vw,64px);
+  line-height:1.05;
+  color:#ffe2a0;
+  text-shadow:0 4px 22px rgba(255,164,45,.18);
+}
+
+.swash{
+  width:240px;
+  height:30px;
+  margin:3px auto 19px;
+  position:relative;
+}
+.swash:before{
+  content:"";
+  position:absolute;
+  left:10px;right:10px;top:11px;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);
+  box-shadow:0 0 12px rgba(246,210,122,.35);
+}
+.swash:after{
+  content:"✦";
+  position:absolute;
+  left:50%;top:0;
+  transform:translateX(-50%);
+  color:var(--gold);
+  font-size:22px;
+}
+
+.message{
+  font-family:Georgia,serif;
+  font-size:18px;
+  line-height:1.55;
+  color:#f8e8cb;
+  max-width:620px;
+  margin:auto;
+}
+.message strong{
+  color:#ffd36e;
+  font-weight:600;
+}
+.message p{margin:10px 0}
+
+.name-pill{
+  display:inline-block;
+  min-width:130px;
+  padding:5px 14px;
+  border:1px solid rgba(246,210,122,.7);
+  border-radius:30px;
+  color:#ffd16b;
+  background:rgba(255,178,46,.06);
+  font-weight:700;
+}
+
+.om{
+  margin:19px 0 2px;
+  font-family:"Noto Serif Devanagari",Georgia,serif;
+  font-size:27px;
+  color:#ffd77d;
+}
+.tagline{
+  color:#e8c985;
+  letter-spacing:4px;
+  font-size:11px;
+  margin-bottom:22px;
+}
+.divider{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  max-width:380px;
+  margin:0 auto 24px;
+  color:#e5bd63;
+}
+.divider span{height:1px;flex:1;background:linear-gradient(90deg,transparent,#c89843)}
+.divider b{font-size:13px}
+
+.controls{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  margin-top:6px;
+}
+
+.input-wrap{
+  height:58px;
+  width:min(100%,300px);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding:0 18px;
+  border:1px solid #c89439;
+  border-radius:32px;
+  background:rgba(10,7,9,.68);
+  box-shadow:inset 0 0 18px rgba(255,187,70,.04);
+}
+.input-wrap svg{width:22px;flex:0 0 auto;stroke:#f5ca6d}
+input{
+  min-width:0;
+  width:100%;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:white;
+  font-size:16px;
+}
+input::placeholder{color:#aaa}
+
+button,.share{
+  height:58px;
+  border:0;
+  border-radius:32px;
+  padding:0 28px;
+  font:700 16px "DM Sans",sans-serif;
+  color:white;
+  cursor:pointer;
+}
+.share{
+  min-width:210px;
+  background:linear-gradient(100deg,#ff8c40,#df1f32);
+  box-shadow:0 8px 28px rgba(227,45,49,.25);
+  transition:.2s transform,.2s box-shadow;
+}
+.share:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(227,45,49,.35)}
+
+.socials{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin:22px 0 30px;
+}
+.social{
+  width:46px;height:46px;
+  border-radius:50%;
+  border:1px solid rgba(255,214,122,.65);
+  display:grid;
+  place-items:center;
+  background:#151014;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:15px;
+  transition:.2s transform,.2s filter;
+}
+.social:hover{transform:translateY(-3px);filter:brightness(1.25)}
+.whatsapp{background:#148c45}.facebook{background:#2461a9}.x{background:#080808}
+.copy{background:#5d32aa}.download{background:#8f5a20}
+
+.footer{
+  padding-top:20px;
+  border-top:1px solid rgba(224,180,87,.28);
+  color:#e4c37e;
+  font-family:Georgia,serif;
+  font-size:14px;
+}
+.footer strong{font-size:17px;color:#f4d17c}
+.footer-heart{color:#e52e34}
+.create-yours{display:inline-block;margin-top:12px;color:#ffd16b;font-family:"DM Sans",sans-serif;font-weight:700;text-decoration:none}
+.create-yours:hover{text-decoration:underline}
+
+.petals{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:5;
+}
+.petal{
+  position:absolute;
+  width:10px;height:15px;
+  border-radius:80% 10% 80% 10%;
+  background:#e74774;
+  opacity:.78;
+  filter:drop-shadow(0 3px 5px rgba(0,0,0,.25));
+  animation:fall linear infinite;
+}
+@keyframes fall{
+  0%{transform:translate3d(0,-30px,0) rotate(0deg)}
+  100%{transform:translate3d(var(--drift),1100px,0) rotate(520deg)}
+}
+
+.toast{
+  position:fixed;
+  left:50%;bottom:22px;
+  transform:translate(-50%,20px);
+  opacity:0;
+  pointer-events:none;
+  padding:12px 18px;
+  border:1px solid rgba(246,210,122,.45);
+  border-radius:30px;
+  background:#211015;
+  color:#ffe8b3;
+  box-shadow:0 10px 35px rgba(0,0,0,.4);
+  transition:.25s;
+  z-index:20;
+}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media(max-width:560px){
+  body{padding:0}
+  .card{border-radius:0;border-left:0;border-right:0}
+  .art{height:360px;background-size:145% auto;background-position:center top}
+  .content{padding:5px 20px 30px}
+  .message{font-size:16px}
+  .controls{flex-direction:column}
+  .input-wrap,.share{width:100%;max-width:360px}
+  .socials{gap:10px}
+}
+</style>
+</head>
+<body>
+
+<main class="card" id="wishCard">
+  <div class="petals" id="petals"></div>
+
+  <section class="art" aria-label="Lord Ganesha artwork"></section>
+
+  <section class="content">
+    <div class="kicker">HAPPY</div>
+    <h1>Ganesh Chaturthi</h1>
+    <div class="swash"></div>
+
+    <div class="message">
+      <p><span class="name-pill" id="wishName">Your Name</span> wishes you a very<br>
+      Happy Ganesh Chaturthi! 🌸</p>
+      <p>May Lord Ganesha bless you with wisdom, happiness,<br>
+      prosperity and success.</p>
+      <p>May every obstacle disappear and every new beginning<br class="desktop">
+      bring endless possibilities.</p>
+    </div>
+
+    <div class="om">गणपति बप्पा मोरया ! 🌸</div>
+    <div class="tagline">MAY GOODNESS ALWAYS GUIDE YOU</div>
+
+    <div class="divider"><span></span><b>✦</b><span></span></div>
+
+    <div class="controls">
+      <label class="input-wrap" aria-label="Enter your name">
+        <svg viewBox="0 0 24 24" fill="none">
+          <circle cx="12" cy="8" r="3.5" stroke-width="1.7"/>
+          <path d="M5 20c.6-3.2 3-5 7-5s6.4 1.8 7 5" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+        <input id="nameInput" maxlength="30" autocomplete="name" placeholder="Enter your name">
+      </label>
+      <button class="share" id="shareBtn">⌯ &nbsp; Create &amp; Share</button>
+    </div>
+
+    <div class="socials">
+      <a class="social whatsapp" id="wa" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">◉</a>
+      <button class="social" id="moreShareBtn" type="button" aria-label="Share to more apps" title="Share to more apps">↗</button>
+      <a class="social facebook" id="fb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">f</a>
+      <a class="social x" id="x" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on X">𝕏</a>
+      <button class="social copy" id="copyBtn" title="Copy wish">⧉</button>
+      <button class="social download" id="printBtn" title="Save / Print">↓</button>
+    </div>
+
+    <div class="footer">
+      A special wish from <strong>ItsYourDay</strong> <span class="footer-heart">♥</span>
+      <br><a class="create-yours" href="../templates.html">Create yours <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const input = document.getElementById("nameInput");
+const wishName = document.getElementById("wishName");
+const toast = document.getElementById("toast");
+
+function cleanName(value){
+  return value.trim().replace(/\s+/g," ").slice(0,30);
+}
+
+function setName(name){
+  const n = cleanName(name);
+  wishName.textContent = n || "Your Name";
+  if(n) input.value = n;
+  document.title = n ? `Happy Ganesh Chaturthi — ${n}` : "Happy Ganesh Chaturthi — ItsYourDay";
+  updateShareLinks(n);
+}
+
+function showToast(text){
+  toast.textContent = text;
+  toast.classList.add("show");
+  clearTimeout(window.__toast);
+  window.__toast = setTimeout(()=>toast.classList.remove("show"),2200);
+}
+
+function wishText(name){
+  const sender = name || "Someone special";
+  return `${sender} wishes you a very Happy Ganesh Chaturthi! 🌸\n\nMay Lord Ganesha bless you with wisdom, happiness, prosperity and success. May every obstacle disappear and every new beginning bring endless possibilities. गणपति बप्पा मोरया!`;
+}
+
+function shareUrl(name){
+  const base = window.location.href.split("?")[0].split("#")[0];
+  return name ? `${base}?name=${encodeURIComponent(name)}` : base;
+}
+
+function updateShareLinks(name){
+  const text = wishText(name);
+  const url = shareUrl(name);
+  document.getElementById("wa").href =
+    `https://wa.me/?text=${encodeURIComponent(text + "\n\n" + url)}`;
+  document.getElementById("fb").href =
+    `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+  document.getElementById("x").href =
+    `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`;
+}
+
+input.addEventListener("input",()=>setName(input.value));
+
+async function shareWish(){
+  const name = cleanName(input.value);
+  if(!name){
+    input.focus();
+    showToast("Enter your name first");
+    return;
+  }
+  setName(name);
+  const url = shareUrl(name);
+  const text = wishText(name);
+  if(navigator.share){
+    try{
+      await navigator.share({ title:`Happy Ganesh Chaturthi — ${name}`, text, url });
+      showToast("Wish shared");
+      return;
+    }catch(e){}
+  }
+  try{
+    await navigator.clipboard.writeText(`${text}\n\n${url}`);
+    showToast("Personalized wish copied");
+  }catch(e){ showToast("Your wish is ready to share"); }
+}
+
+document.getElementById("shareBtn").addEventListener("click", shareWish);
+document.getElementById("moreShareBtn").addEventListener("click", shareWish);
+
+document.getElementById("copyBtn").addEventListener("click", async ()=>{
+  const name = cleanName(input.value);
+  if(!name){ showToast("Enter your name first"); return; }
+  const text = wishText(name) + "\n\n" + shareUrl(name);
+  try{
+    await navigator.clipboard.writeText(text);
+    showToast("Wish copied");
+  }catch(e){
+    showToast("Copy is unavailable in this browser");
+  }
+});
+
+document.getElementById("printBtn").addEventListener("click",()=>{
+  window.print();
+});
+
+// Load ?name=Aman automatically when the page is shared.
+const params = new URLSearchParams(location.search);
+if(params.get("name")) setName(params.get("name"));
+else updateShareLinks("");
+
+/* Animated petals */
+const petals = document.getElementById("petals");
+for(let i=0;i<24;i++){
+  const p=document.createElement("span");
+  p.className="petal";
+  p.style.left=(Math.random()*100)+"%";
+  p.style.top=(-Math.random()*100)+"px";
+  p.style.setProperty("--drift", `${-90+Math.random()*180}px`);
+  p.style.animationDuration=(7+Math.random()*8)+"s";
+  p.style.animationDelay=(-Math.random()*12)+"s";
+  p.style.transform=`rotate(${Math.random()*360}deg)`;
+  p.style.scale=(.65+Math.random()*.8);
+  petals.appendChild(p);
+}
+</script>
+</body>
+</html>

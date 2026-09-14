@@ -1,4 +1,5 @@
 export const templates = [
+  { id: 'ganesh-chaturthi-blessings', name: 'Ganesh Chaturthi Blessings', occasion: 'Festival', icon: 'fa-om', palette: 'ganesh', description: 'A festive, share-ready Ganesh Chaturthi blessing personalized with the recipient’s name.', featured: true, experienceUrl: 'ganesh_chaturthi_template/index.html', directPersonalization: true },
   { id: 'birthday-story', name: 'Birthday Story', occasion: 'Birthday', icon: 'fa-gift', palette: 'story', description: 'A full interactive birthday adventure with memories, surprises, a mood picker and a candle finale.', featured: true, experienceUrl: 'birthday_template/index.html' },
   { id: 'birthday-confetti', name: 'Birthday Confetti', occasion: 'Birthday', icon: 'fa-cake-candles', palette: 'birthday', description: 'A bright, joyful birthday card with cake, confetti and plenty of cheer.', featured: true },
   { id: 'birthday-sparkle', name: 'Birthday Sparkle', occasion: 'Birthday', icon: 'fa-wand-magic-sparkles', palette: 'sparkle', description: 'A soft, dreamy birthday wish for someone who deserves to shine.', featured: true },
